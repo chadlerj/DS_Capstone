@@ -1,0 +1,15 @@
+---
+title: "DS_Capstone"
+output: html_notebook
+---
+
+Adding a notebook to hold the work.
+
+
+```{r}
+
+x<- "Hello World"
+x
+
+```
+
