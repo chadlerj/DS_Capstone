@@ -13,3 +13,17 @@ x
 
 ```
 
+
+```{r Install and Load Packages, message=FALSE, warning=FALSE, echo=FALSE}
+
+if (!require("pacman")) install.packages("pacman")
+
+
+pacman::p_load("dplyr", "reshape2", "ggplot2", "ggthemes", "ggrepel",
+               "tidyr", "stringr", "tidytext")
+
+
+```
+
+
+
