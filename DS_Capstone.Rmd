@@ -3,15 +3,6 @@ title: "DS_Capstone"
 output: html_notebook
 ---
 
-Adding a notebook to hold the work.
-
-
-```{r}
-
-x<- "Hello World"
-x
-
-```
 
 
 ```{r Install and Load Packages, message=FALSE, warning=FALSE, echo=FALSE}
@@ -26,4 +17,35 @@ pacman::p_load("dplyr", "reshape2", "ggplot2", "ggthemes", "ggrepel",
 ```
 
 
+
+```{r}
+
+## something something read file.
+
+con <- file("en_US.twitter.txt", "r") 
+rawText <- readLines(con, -1) ## use a negative to read the whole thing
+close(con) 
+
+
+```
+
+
+
+something about breaking out the word counts
+dropping fillers
+
+N grams then next
+
+
+```{r}
+
+text_df <- data_frame(rawText)
+text_df <- mutate(text_df, line = row_number())
+
+tidy_text <- text_df %>% unnest_tokens(word, rawText)
+#count(text_df, rawText, sort= TRUE)
+
+
+
+```
 
